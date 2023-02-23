@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/featureCommonNav"
+        android:title="FeatureCommon" />
+    <item
+        android:id="@+id/featureOneNav"
+        android:title="FeatureOne" />
+    <item
+        android:id="@+id/featureTwoNav"
+        android:title="FeatureTwo" />
+</menu>

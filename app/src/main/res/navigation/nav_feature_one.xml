@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/featureOneNav"
+    app:startDestination="@id/featureOneAFragment">
+
+    <fragment
+        android:id="@+id/featureOneAFragment"
+        android:name="com.phongbm.mbs.featureone.FeatureOneAFragment" />
+
+    <fragment
+        android:id="@+id/featureOneBFragment"
+        android:name="com.phongbm.mbs.featureone.FeatureOneBFragment" />
+</navigation>
