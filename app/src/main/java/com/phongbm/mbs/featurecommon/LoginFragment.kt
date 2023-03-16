@@ -5,6 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.NavOptions
+import androidx.navigation.fragment.findNavController
+import com.phongbm.mbs.R
 import com.phongbm.mbs.databinding.FragmentLoginBinding
 
 /**
@@ -25,6 +28,12 @@ class LoginFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        binding.btnOpenHome.setOnClickListener {
+            val navOptions = NavOptions.Builder()
+                .setPopUpTo(R.id.featureCommonNav, true)
+                .build()
+            findNavController().navigate(R.id.homeFragment, null, navOptions)
+        }
     }
 
     override fun onDestroyView() {

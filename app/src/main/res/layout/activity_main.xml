@@ -25,7 +25,7 @@
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottomNavigation"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             app:menu="@menu/menu_bottom_navigation" />
     </LinearLayout>
 </androidx.drawerlayout.widget.DrawerLayout>

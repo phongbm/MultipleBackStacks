@@ -1,6 +1,7 @@
 package com.phongbm.mbs.featureone
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -15,14 +16,24 @@ import com.phongbm.mbs.databinding.FragmentFeatureOneABinding
  */
 
 class FeatureOneAFragment : Fragment() {
+    companion object {
+        private const val TAG = "FeatureOneAFragment"
+    }
+
     private var _binding: FragmentFeatureOneABinding? = null
     private val binding get() = _binding!!
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        Log.d(TAG, "onCreate()...")
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        Log.d(TAG, "onCreateView()...")
         _binding = FragmentFeatureOneABinding.inflate(layoutInflater, container, false)
         return binding.root
     }
@@ -38,6 +49,12 @@ class FeatureOneAFragment : Fragment() {
 
     override fun onDestroyView() {
         super.onDestroyView()
+        Log.d(TAG, "onDestroyView()...")
         _binding = null
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.d(TAG, "onDestroy()...")
     }
 }
